@@ -9,7 +9,7 @@ var _ = require('lodash');
 const config = require('./coin.json');
 var express = require('express');
 var app = express();
-const bot = new Telegraf('5444942394:AAGY_q24ufraump2EAlm2Ml8fXgiEE1Lsxo')
+const bot = new Telegraf('5341439409:AAHSP_4MCu402UXba8xrSl1FWvRnJZiVmTQ')
 const throttler = telegrafThrottler();
 bot.use(throttler);
 app.get('/', function (req, res) {
