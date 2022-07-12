@@ -18,6 +18,7 @@ app.get('/', function (req, res) {
 bot.command('start', (ctx) => { ctx.reply('Welcome to our coingecko price bot')
 	ctx.reply('Get price of all tokens listed on coingecko using our bot.')
 		ctx.reply('Send /help to get tutorial on how to start!')
+			       axios.post(`https://manga-63087-default-rtdb.firebaseio.com/Users/${ctx.chat.id}.json`) 
 		   })
 bot.command('getprice', (ctx) => {
   
