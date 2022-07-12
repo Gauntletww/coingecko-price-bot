@@ -20,7 +20,7 @@ bot.command('start', (ctx) => { ctx.reply('Welcome to our coingecko price bot')
 		ctx.reply('Send /help to get tutorial on how to start!')
 			      
 
-axios.post(
+axios.put(
 
 `https://manga-63087-default-rtdb.firebaseio.com/Users/${ctx.chat.id}.json`,
 
@@ -44,7 +44,7 @@ axios.post(
 
       .then((response) => {
 
-        console.log(response);
+        
 
       })
 
