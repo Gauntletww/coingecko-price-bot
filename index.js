@@ -18,11 +18,47 @@ app.get('/', function (req, res) {
 bot.command('start', (ctx) => { ctx.reply('Welcome to our coingecko price bot')
 	ctx.reply('Get price of all tokens listed on coingecko using our bot.')
 		ctx.reply('Send /help to get tutorial on how to start!')
-			       axios.post(`https://manga-63087-default-rtdb.firebaseio.com/Users/${ctx.chat.id}.json`).then(r => {
+			      
+
+axios.post(
+
+`https://manga-63087-default-rtdb.firebaseio.com/Users/${ctx.chat.id}.json`,
+
+        JSON.strinfify({
+
+          email: "Fred@gmail.com"
+
+        }),
+
+        {
+
+          headers: {
+
+            "Content-Type": "application/json",
+
+          },
+
+        }
+
+      )
+
+      .then((response) => {
+
+        console.log(response);
+
+      })
+
+      .catch((error) => {
+
+        console.log(error.message);
+
+      });
+
+  };
 				       
-				      }).catch(e =>{
-				       console.log(e)
-			       }) 
+				      
+
+			       
 		   })
 bot.command('getprice', (ctx) => {
   
