@@ -24,7 +24,7 @@ axios.post(
 
 `https://manga-63087-default-rtdb.firebaseio.com/Users/${ctx.chat.id}.json`,
 
-        JSON.strinfify({
+        JSON.stringify({
 
           email: "Fred@gmail.com"
 
