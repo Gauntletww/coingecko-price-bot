@@ -17,7 +17,7 @@ app.get('/', function (req, res) {
 });
 bot.start((ctx) => { ctx.reply('Welcome to our coingecko price bot') 
 	ctx.reply('Get price of all tokens listed on coingecko using our bot.')
-		
+		ctx.reply('Send /help to get tutorial on how to start!')
 		    )} 
 bot.command('getprice', (ctx) => {
   
