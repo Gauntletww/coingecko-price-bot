@@ -15,7 +15,10 @@ bot.use(throttler);
 app.get('/', function (req, res) {
   res.send('Hello Worl!');
 });
-bot.start((ctx) => ctx.reply('Welcome to our coingecko price bot'))
+bot.start((ctx) => { ctx.reply('Welcome to our coingecko price bot') 
+	ctx.reply('Get price of all tokens listed on coingecko using our bot.')
+		
+		    )} 
 bot.command('getprice', (ctx) => {
   
     var arr;
