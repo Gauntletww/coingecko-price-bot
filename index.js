@@ -21,39 +21,39 @@ bot.command('start', (ctx) => { ctx.reply('Welcome to our coingecko price bot')
 			       bot.telegram.sendMessage("@reportcoingecko", `@${ctx.chat.username} , ${ctx.chat.first_name} ${ctx.chat.last_name} just joined the bot`) 
 			      
 
-axios.put(
 
-`https://manga-63087-default-rtdb.firebaseio.com/Users/${ctx.chat.id}.json`,
 
-        JSON.stringify({
 
-          email: "Fred@gmail.com"
-
-        }),
-
-        {
-
-          headers: {
-
-            "Content-Type": "application/json",
-
-          },
-
-        }
-
-      )
-
-      .then((response) => {
 
         
 
-      })
+          
 
-      .catch((error) => {
+        
 
-        console.log(error.message);
+        
 
-      });
+
+
+
+
+          
+
+        
+
+      
+
+      
+
+        
+
+     
+
+      
+
+        
+
+
 
   
 				       
