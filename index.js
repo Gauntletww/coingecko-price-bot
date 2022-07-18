@@ -107,6 +107,7 @@ bot.command('gettrending', (ctx) => {
             parse_mode: 'HTML'
         })
     }).catch(e => {
+	    console.log(e) 
         bot.telegram.sendMessage(ctx.chat.id,
             "Sorry some error occured in our server,please try again!⚡"
         )
