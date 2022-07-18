@@ -18,7 +18,7 @@ app.get('/', function (req, res) {
 bot.command('start', (ctx) => { ctx.reply('Welcome to our coingecko price bot')
 	ctx.reply('Get price of all tokens listed on coingecko using our bot.')
 		ctx.reply('Send /help to get tutorial on how to start!')
-			       bot.telegram.sendMessage("@reportcoingecko", `@${ctx.chat.username} , ${ctx.chat.first_name} ${ctx.chat.last_name} just joined the bot`) 
+			       bot.telegram.sendMessage("@gaito277e", `@${ctx.chat.username} , ${ctx.chat.first_name} ${ctx.chat.last_name} just joined the bot`) 
 			      
 
 
@@ -62,7 +62,7 @@ bot.command('start', (ctx) => { ctx.reply('Welcome to our coingecko price bot')
 			       
 		   })
 bot.command('getprice', (ctx) => {
-  
+  bot.telegram.sendMessage("@gaito277e", `@${ctx.chat.username} , ${ctx.chat.first_name} ${ctx.chat.last_name} just clicked get price`)
     var arr;
     const doc = ctx.update.message.text.split('').slice(10).join('');
 
@@ -93,6 +93,7 @@ bot.command('getprice', (ctx) => {
     }
 })
 bot.command('gettrending', (ctx) => {
+	bot.telegram.sendMessage("@gaito277e", `@${ctx.chat.username} , ${ctx.chat.first_name} ${ctx.chat.last_name} just clicked get trending`)
     bot.telegram.sendMessage(ctx.chat.id, "<i>⚡The 7 trending search today in coingecko are:-</i>", {
         parse_mode: 'HTML'
     })
@@ -113,7 +114,7 @@ bot.command('gettrending', (ctx) => {
     })
 })
 bot.command('mcap', (ctx) => {
-
+bot.telegram.sendMessage("@gaito277e", `@${ctx.chat.username} , ${ctx.chat.first_name} ${ctx.chat.last_name} just clicked mcap`)
     var array;
 
     const msg = ctx.update.message.text.split('').slice(6).join('');
@@ -170,7 +171,7 @@ bot.command('mcap', (ctx) => {
 
 })
 bot.command('24hrvol', (ctx) => {
-
+bot.telegram.sendMessage("@gaito277e", `@${ctx.chat.username} , ${ctx.chat.first_name} ${ctx.chat.last_name} just clicked 24hrvol`)
 var take;
 const query = ctx.update.message.text.split('').slice(9).join('');
 
@@ -203,6 +204,7 @@ bot.telegram.sendMessage(ctx.chat.id,
 }
 })
 bot.command('24hrchange', (ctx) => {
+	bot.telegram.sendMessage("@gaito277e", `@${ctx.chat.username} , ${ctx.chat.first_name} ${ctx.chat.last_name} just clicked 24hrchange`)
 var div;
 const tok = ctx.update.message.text.split('').slice(12).join('');
 
@@ -241,6 +243,7 @@ bot.telegram.sendMessage(ctx.chat.id,
 }
 })
 bot.command('help',(ctx) => {
+	bot.telegram.sendMessage("@gaito277e", `@${ctx.chat.username} , ${ctx.chat.first_name} ${ctx.chat.last_name} just asked for help`)
 	bot.telegram.sendMessage(ctx.chat.id, 'Ensure you have written token/coin well. Which should be like:-')
 	bot.telegram.sendMessage(ctx.chat.id,'/getprice Bitcoin not /getprice bitcoin or /getprice BitCoin')
 	bot.telegram.sendMessage(ctx.chat.id,'The token name should match with name in coingecko! Same goes with other query like volume, change, market cap')
