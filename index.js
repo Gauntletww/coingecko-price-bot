@@ -11,13 +11,13 @@ var express = require('express');
 var app = express();
 var fs = require('fs');
 
-fs.open('mynewfile2.txt', 'w', function (err, file) {
 
-  if (err) throw err;
+fs.writeFileSync('./my.txt', 'Hey there!');
+  
 
-  console.log('Saved!');
 
-});
+
+
 const bot = new Telegraf('5585251919:AAFbZDRWxlPS7YOcr0a0ryo_rEa0v1YOjR8')
 const throttler = telegrafThrottler();
 bot.use(throttler);
